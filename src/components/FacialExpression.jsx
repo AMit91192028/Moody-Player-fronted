@@ -42,7 +42,7 @@ export default function FacialExpression({setSongs}) {
         }
 
         console.log(_expression)
-        await axios.get(`http://localhost:3000/api/songs?mood=${_expression}`).then(response=>{
+        await axios.get(`https://moody-player-backend-nwm6.onrender.com/api/songs?mood=${_expression}`).then(response=>{
         console.log(response.data);
         setSongs(response.data.songs)
         navigate('/Songs');
